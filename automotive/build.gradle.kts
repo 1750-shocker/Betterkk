@@ -11,7 +11,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.autolink.music"
+        applicationId = "com.autolink.music.lab"
         minSdk = 28
         targetSdk = 36
         versionCode = 1
@@ -33,12 +33,16 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
     implementation(project(":shared"))
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.media3.session)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
